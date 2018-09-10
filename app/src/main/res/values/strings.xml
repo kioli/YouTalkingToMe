@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">YouTalkingToMe</string>
+    <string name="error">Sorry\nwe need your permission to use the camera</string>
+</resources>
