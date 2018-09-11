@@ -90,12 +90,14 @@ class MainActivity : AppCompatActivity(), SurfaceHolder.Callback {
         camera?.let {
             try {
                 it.stopFaceDetection()
+                it.setFaceDetectionListener(null)
                 it.stopPreview()
                 it.release()
             } catch (e: IOException) {
                 e.printStackTrace()
             }
         }
+        camera = null
     }
 
     private fun faceDetected(faces: Array<Camera.Face>?) {
